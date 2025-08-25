@@ -10,11 +10,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.composecontacts.detail.ui.ContactDetailScreen
 
-object Routes {
-  const val List = "list"
-  const val Detail = "detail/{userId}"
-}
-
 @Composable
 fun ContactsNavHost(
   modifier: Modifier = Modifier,
@@ -23,15 +18,15 @@ fun ContactsNavHost(
 
   NavHost(
     modifier = modifier, navController = navController,
-    startDestination = Routes.List
+    startDestination = Routes.LIST
   ) {
-    composable(Routes.List) {
+    composable(Routes.LIST) {
       ContactsListScreen { id ->
         navController.navigate("detail/$id")
       }
     }
     composable(
-      route = Routes.Detail,
+      route = Routes.DETAIL,
       arguments = listOf(navArgument("userId") { type = NavType.IntType })
     ) { backStackEntry ->
       val userId = backStackEntry.arguments?.getInt("userId") ?: return@composable
@@ -41,4 +36,9 @@ fun ContactsNavHost(
       )
     }
   }
+}
+
+object Routes {
+  const val LIST = "list"
+  const val DETAIL = "detail/{userId}"
 }
