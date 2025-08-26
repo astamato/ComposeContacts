@@ -23,12 +23,12 @@ data class ReqResListResponse(
 
 @Serializable
 data class ReqResSupport(
-    val url: String,
-    val text: String
+  val url: String,
+  val text: String
 )
 
 @Serializable
 data class ReqResSingleResponse(
-    val data: ReqResUser,
-    val support: ReqResSupport
+  val data: ReqResUser,
+  val support: ReqResSupport
 )

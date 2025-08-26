@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-
 sealed class ContactsListUiState {
   data class Loaded(
     val contacts: List<ReqResUser> = emptyList(),
@@ -25,7 +24,6 @@ sealed class ContactsListUiState {
 class ContactsListViewModel @Inject constructor(
   val repository: ContactsRepository
 ) : ViewModel() {
-
   private val _state = MutableStateFlow<ContactsListUiState>(ContactsListUiState.Loading)
   val state = _state.asStateFlow()
 

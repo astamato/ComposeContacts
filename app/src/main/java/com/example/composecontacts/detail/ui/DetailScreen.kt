@@ -3,10 +3,8 @@ package com.example.composecontacts.detail.ui
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
@@ -35,7 +33,6 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
 import com.example.composecontacts.core.network.ReqResSingleResponse
-import com.example.composecontacts.core.network.ReqResUser
 import com.example.composecontacts.detail.ui.vm.UserDetailViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
